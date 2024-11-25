@@ -6,7 +6,11 @@ module.exports = {
     "./css/**/*.css" // Include all CSS files in the 'css' folder
   ],
   theme: {
-    extend: {}, // Extend the theme if needed
+    extend: {
+      colors: {
+        vividBlue: '#2938f1',
+      },
+    },
   },
   plugins: [], // Add plugins here if required
 };

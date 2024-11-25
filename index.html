@@ -1,57 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/output.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
+    <!-- NAV START -->
     <nav class=" w-full pt-4 pb-4 flex bg-white justify-between px-5 lg:px-12 fixed">
-        <div class="flex">
-            <a class="my-auto font-bold font-sans">Start Bootstrap</a>
+        <div class="flex flex-col justify-center">
+            <div class="flex">
+                <a class="my-auto font-bold font-sans" href="#hero_section">Start Bootstrap</a>
+            </div>
+            <div id="toggled_div" class="h-0 transition-all absolute top-20 left-0 px-5 overflow-hidden w-full bg-white">
+                <ul class="my-4 ">
+                    <li><a href="#features_section">Features</a></li>
+                    <li class="mb-4"><a href="#download_section">Download</a></li>
+                    <li><button class="text-white blue_btn px-4 py-2 rounded-3xl ">
+                            <i class="fas fa-comment-dots"></i> Send Feedback
+                        </button></li>
+                </ul>
+            </div>
         </div>
-        <div class="hidden lg:flex">
+        <div class="hidden lg:flex items-start">
             <ul class="flex ">
-                <li class="p-2">Features</li>
-                <li class="p-2 mr-6">Download</li>
+                <li class="p-2"><a href="#features_section">Features</a></li>
+                <li class="p-2 mr-6"><a href="#download_section">Download</a></li>
             </ul>
-            <button>
+            <button class="text-white rounded-3xl blue_btn px-4 py-2 ">
                 <i class="fas fa-comment-dots"></i> Send Feedback
             </button>
         </div>
         <div class="block lg:hidden">
-            <button  class=" px-4 py-3 border border-slate-300 active:border-4 active:border-black">Menu <i class="fa-solid fa-bars"></i></button>
+            <button id="toggle_btn" class=" px-4 py-3 border border-slate-300 transition-all">Menu <i
+                    class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
-    <header class="flex flex-col md:px-12 bg-white pt-36 pb-24 lg:flex-row px-0">
+    <!-- NAV END -->
+    <!-- HEADER START -->
+    <header id="hero_section" class="flex flex-col md:px-12 bg-white pt-36 pb-24 lg:flex-row px-0">
         <div class="w-full  lg:2/4 m-auto">
-            <h1 class="lg:text-7xl text-center lg:text-left  mb-4 font-light text-5xl">Showcase your app beautifully.</h1>
-            <p class="text-center lg:text-left from-neutral-700 mb-12">Launch your mobile app landing page faster with this free, open source theme from Start Bootstrap!</p>
+            <h1 class="lg:text-7xl text-center lg:text-left  mb-4 font-light text-5xl">Showcase your app beautifully.
+            </h1>
+            <p class="text-center lg:text-left from-neutral-700 mb-12">Launch your mobile app landing page faster with
+                this free, open source theme from Start Bootstrap!</p>
             <div class="flex flex-col mb-12 gap-4 lg:flex-row">
-                <img class="h-12"  src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/google-play-badge.svg" alt="">
-                <img class="h-12"  src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/app-store-badge.svg" alt="">
+                <img class="h-12"
+                    src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/google-play-badge.svg"
+                    alt="">
+                <img class="h-12"
+                    src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/app-store-badge.svg" alt="">
             </div>
         </div>
-       <div class="w-3/4 m-auto lg:w-2/4">
-        <img class="hidden sm:block w-full" src="./assets/img/phone_svg.png" alt="">
-        <img class="block sm:hidden w-full" src="./assets/img/just_phone.png" alt="">
-       </div>
+        <div class="w-3/4 m-auto lg:w-2/4">
+            <img class="hidden sm:block w-full" src="./assets/img/phone_svg.png" alt="">
+            <img class="block sm:hidden w-2/4 m-auto" src="./assets/img/just_phone.png" alt="">
+        </div>
     </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
     <main>
         <section class="solution_section py-20">
-            <p class="text-white text-2xl lg:text-4xl font-semibold max-w-3xl mx-auto mb-8">"An intuitive solution to a common problem that we all face, wrapped up in a single app!"</p>
-            <img class="h-12 m-auto" src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/tnw-logo.svg" alt="">
+            <p class="text-white text-2xl lg:text-4xl font-semibold max-w-3xl mx-auto mb-8">"An intuitive solution to a
+                common problem that we all face, wrapped up in a single app!"</p>
+            <img class="h-12 m-auto"
+                src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/tnw-logo.svg" alt="">
         </section>
-
-
-        <section class="flex flex-col lg:flex-row py-20 items-center justify-center">
+        <section id="features_section" class="flex flex-col lg:flex-row py-20 items-center justify-center">
             <div class="w-3/6 flex items-center">
                 <img class="w-full m-auto" src="./assets/img/semi-circle-phone.png" alt="">
             </div>
@@ -59,62 +87,70 @@
                 <div class="w-full md:w-2/4 p-5 gap-3 flex flex-col items-center">
                     <i class="m-auto gradient-text text-6xl text-center fa-solid fa-mobile"></i>
                     <h3 class="text-3xl text-center">Device Mockups</h3>
-                    <p class="text-gray-500 text-center">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                    <p class="text-gray-500 text-center">Ready to use HTML/CSS device mockups, no Photoshop required!
+                    </p>
                 </div>
                 <div class="w-full md:w-2/4 p-5 gap-3 flex flex-col items-center">
                     <i class="m-auto gradient-text text-6xl text-center fa-solid fa-camera"></i>
                     <h3 class="text-3xl text-center">Flexible Use</h3>
-                    <p class="text-gray-500 text-center">Put an image, video, animation, or anything else in the screen!</p>
+                    <p class="text-gray-500 text-center">Put an image, video, animation, or anything else in the screen!
+                    </p>
                 </div>
                 <div class="w-full md:w-2/4 p-5 gap-3 flex flex-col items-center">
                     <i class="m-auto gradient-text text-6xl text-center fa-solid fa-gift"></i>
                     <h3 class="text-3xl text-center">Free to Use</h3>
-                    <p class="text-gray-500 text-center">As always, this theme is free to download and use for any purpose!</p>
+                    <p class="text-gray-500 text-center">As always, this theme is free to download and use for any
+                        purpose!</p>
                 </div>
                 <div class="w-full md:w-2/4 p-5 gap-3 flex flex-col items-center">
                     <i class="m-auto gradient-text text-6xl text-center fa-solid fa-star"></i>
                     <h3 class="text-3xl text-center">Open Source</h3>
-                    <p class="text-gray-500 text-center">Since this theme is MIT licensed, you can use it commercially!</p>
+                    <p class="text-gray-500 text-center">Since this theme is MIT licensed, you can use it commercially!
+                    </p>
                 </div>
             </div>
         </section>
-
-
-
-
-
+        <section class="px-4 py-20 text-center lg:px-12">
+            <h2 class="mb-6 text-5xl">Enter a new age of web design</h2>
+            <p class="text-left">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p>
+        </section>
         <section class="stop_waiting py-60 lg:px-16 px-8 m-auto">
-            <h2 class="text-white font-light text-6xl mb-6" >
+            <h2 class="text-white font-light text-6xl mb-6">
                 Stop waiting.
                 <br>
                 Start building.
             </h2>
-            <button class="text-white border border-white py-4 px-6 rounded-3xl hover:bg-white hover:text-black">Download for free</button>
+            <button
+                class="text-white border border-white py-4 px-6 rounded-3xl hover:bg-white hover:text-black">Download
+                for free</button>
         </section>
-
-
-
-
         <section class="get_the_app_section py-20 ">
-            <h2 class="text-white text-2xl lg:text-4xl font-semibold max-w-3xl mx-auto mb-8 text-center">Get the app now!</h2>
+            <h2 class="text-white text-2xl lg:text-4xl font-semibold max-w-3xl mx-auto mb-8 text-center">Get the app
+                now!</h2>
             <div class="flex flex-col mb-12 gap-4 lg:flex-row justify-center">
-                <img class="h-12"  src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/google-play-badge.svg" alt="">
-                <img class="h-12"  src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/app-store-badge.svg" alt="">
+                <img class="h-12"
+                    src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/google-play-badge.svg"
+                    alt="">
+                <img class="h-12"
+                    src="https://startbootstrap.github.io/startbootstrap-new-age/assets/img/app-store-badge.svg" alt="">
             </div>
         </section>
     </main>
-    <footer>
+    <!-- MAIN END -->
+    <!-- FOOTER START -->
+    <footer id="download_section">
         <div class="m-auto py-12 bg-black">
             <p class="m-auto text-center text-gray">© Your Website 2023. All Rights Reserved.</p>
-             <ul class="flex m-auto gap-2 justify-center">
-            <li><a href="" class="text-gray">Privacy</a></li>
-            <li class="text-gray">·</li>
-            <li><a href="" class="text-gray">Terms</a></li>
-            <li class="text-gray">·</li>
-            <li><a href="" class="text-gray">FAQ</a></li>
+            <ul class="flex m-auto gap-2 justify-center">
+                <li><a href="" class="text-gray">Privacy</a></li>
+                <li class="text-gray">·</li>
+                <li><a href="" class="text-gray">Terms</a></li>
+                <li class="text-gray">·</li>
+                <li><a href="" class="text-gray">FAQ</a></li>
             </ul>
         </div>
     </footer>
+    <!-- FOOTER END -->
 </body>
 
 </html>
