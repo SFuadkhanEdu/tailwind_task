@@ -1,0 +1,16 @@
+.solution_section, .get_the_app_section{
+    background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;
+}
+.stop_waiting{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.text-gray{
+    color: rgba(255, 255, 255, 0.5);
+}
+.gradient-text {
+      font-size: 2rem;
+      font-weight: bold;
+      background: -webkit-linear-gradient(#2937f0, #9f1ae2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
